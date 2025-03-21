@@ -102,16 +102,130 @@
         color: #333; 
       }
 
-      .margin-gap {
-    margin-top: 13px;
-    margin-bottom: 47px;
-    margin-right: 70px;
-    margin-left: 52px;
-}
-
 .gapsMar {
     margin-top: 40px;
 }
+ /* Add these CSS styles */
+ .gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #0a192f, #172a45, #2a4a6e);
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #00b4d8, #90e0ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+/* Updated Image Styles */
+.profile-image-container {
+  max-width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.03);
+  border-color: rgba(0, 180, 216, 0.5);
+}
+
+.image-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  background: rgba(0, 180, 216, 0.1);
+  transition: opacity 0.3s ease;
+}
+
+.profile-image-container:hover .image-hover-overlay {
+  opacity: 1;
+}
+
+/* Responsive Sizing */
+@media (max-width: 768px) {
+  .profile-image-container {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-image-container {
+    max-width: 200px;
+  }
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
+.btn-hover-glow {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-hover-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 180, 216, 0.4);
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Add scroll indicator animation */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 768px) {
+  .education-details {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      border: 1px solid #b7b7b7;
+      border-radius: 10px;
+      padding: 15px 20px;
+      flex-direction: column;
+      align-content: center;
+  }
+}
+
     </style>
   </head>
 
@@ -157,41 +271,66 @@
 
     <main class="main">
       <!-- Hero Section -->
-      <section id="hero" class="hero section light-background">
-        <!-- <img src="assets/img/hero-bg.jpg" alt="" /> -->
-
-        <div class="container" data-aos="zoom-out">
-          <div class="row justify-content-center">
-            <div class="col-lg-9">
-              <h2>Suraj Chouhan</h2>
-              <p>
-                I'm
-                <span class="typed" data-typed-items="Software Engineer"
-                  >Software Engineer</span
-                ><span
-                  class="typed-cursor typed-cursor--blink"
-                  aria-hidden="true"
-                ></span>
-              </p>
-
-              <div class="social-links">
-                <a href="#"><i class="bi bi-twitter-x"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
-              <div class="mt-4">
-                <a
-                  href="path/to/your/resume.pdf"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download Resume</a
-                >
-              </div>
+      <section id="hero" class="hero section">
+        <!-- Animated Gradient Background -->
+        <div class="gradient-bg"></div>
+        
+        <!-- Particles Background -->
+        <div id="particles-js" class="particles-container"></div>
+      
+        <div class="container text-center" data-aos="zoom-out">
+          <!-- Profile Image with Hover Effect -->
+        <!-- Profile Image Section -->
+          <div class="profile-image-container mx-auto">
+            <img src="assets/img/folio-profile-1.jpg" alt="Suraj Chouhan" 
+                class="profile-image rounded-circle shadow-lg">
+            <div class="image-hover-overlay"></div>
+          </div>
+          <!-- Name and Title -->
+          <h2 class="mt-3 neon-text">Suraj Chouhan</h2>
+    <p class="neon-subtext">
+      I'm <span class="typed" data-typed-items="Software Engineer, Web Developer, AI Enthusiast">Software Engineer</span>
+    </p>
+      
+          <!-- Social Links with Hover Effects -->
+          <div class="social-links mt-4">
+            <a href="#" class="social-icon linkedin" target="_blank" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="#" class="social-icon github" target="_blank" aria-label="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="#" class="social-icon twitter" target="_blank" aria-label="Twitter">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="#" class="social-icon medium" target="_blank" aria-label="Blog">
+              <i class="bi bi-medium"></i>
+            </a>
+          </div>
+      
+          <!-- Action Buttons -->
+          <div class="hero-actions mt-5">
+            <a href="#contact" class="btn btn-primary btn-lg btn-hover-glow scrollto">
+              <i class="bi bi-send me-2"></i>Get in Touch
+            </a>
+            <a href="path/to/resume.pdf" 
+               class="btn btn-outline-light btn-lg btn-hover-glow" 
+               target="_blank"
+               download>
+              <i class="bi bi-download me-2"></i>Download CV
+            </a>
+          </div>
+      
+          <!-- Scroll Indicator -->
+          <div class="scroll-indicator mt-5">
+            <div class="mouse">
+              <div class="wheel"></div>
             </div>
+            <div class="arrow-down"></div>
           </div>
         </div>
       </section>
+
       <!-- /Hero Section -->
 
       <!-- About Section -->
@@ -199,19 +338,24 @@
         <div class="container section-title" data-aos="fade-up">
           <h2>About</h2>
         </div>
-        <div class="container">
-          <h3>A bit about me</h3>
-          <p>
-            I am currently pursuing a Master's in Artificial Intelligence from
-            Medi-Caps University. Alongside my studies, I work as a Software
-            Engineer at Techinfini Solutions Pvt. Ltd. My passion for technology
-            and innovation drives me to explore the vast potential of AI in
-            solving real-world problems.I focus on creating efficient,
-            user-centric solutions that leverage the power of AI. My journey in
-            this field is fueled by a commitment to continuous learning and a
-            desire to make a meaningful impact through technology.
+        <div class="container py-4">
+          <h3 class="mb-3 fw-bold text-primary">🚀 A Bit About Me</h3>
+          <p class="lead text-muted">
+            I am currently working as a <strong>Software Engineer at Techinfini Solutions Pvt. Ltd.</strong>, 
+            where I focus on building efficient, scalable, and user-centric solutions. My expertise lies in 
+            developing <strong>AI-powered applications</strong> that solve real-world problems.  
+          </p>
+          <p class="lead text-muted">
+            Alongside my professional work, I am pursuing a <strong>Master's in Artificial Intelligence</strong> 
+            at <strong>Medi-Caps University</strong>. My passion for technology drives me to continuously 
+            explore new possibilities, bridging the gap between <strong>research and practical implementation</strong>.
+          </p>
+          <p class="lead text-muted">
+            With a strong commitment to <strong>innovation</strong>, I aim to make a meaningful impact through 
+            <span class="text-success">AI-driven solutions.</span> Let's build the future together! 🌟  
           </p>
         </div>
+        
         <div class="gapsMar">
           <div class="container">
             <h3>Education</h3>
@@ -324,6 +468,19 @@
               />
               <div class="text">Pandas</div>
             </div>
+ 
+
+              <!-- Hugging Face -->
+              <div class="card">
+                <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" />
+                <div class="text">Hugging Face</div>
+              </div>
+
+              <!-- Docker -->
+              <div class="card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
+                <div class="text">Docker</div>
+              </div>
 
             <div class="card">
               <img
@@ -445,14 +602,13 @@
                       d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"
                     ></path>
                   </svg>
-                  <i class="bi bi-laptop"></i>
+                  <i class="bi bi-heart-pulse"></i>
                 </div>
-                <a href="#" class="stretched-link">
-                  <h3>Ledo Markt</h3>
+                <a href="https://huggingface.co/spaces/surajchauhan24/ai-medi-bot"  target="_blank" class="stretched-link">
+                  <h3>🩺 AI Medi Bot – Your Virtual Health Companion</h3>
                 </a>
                 <p>
-                  Ut excepturi voluptatem nisi sed. Quidem fuga consequatur.
-                  Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.
+                  Experience the future of healthcare! 🤖✨ AI Medi Bot listens to your symptoms, analyzes medical images, and provides **doctor-like insights** instantly. Get **quick, reliable, and AI-powered** health advice at your fingertips. 🏥💙  
                 </p>
               </div>
             </div>
@@ -531,31 +687,48 @@
               data-aos="fade-up"
               data-aos-delay="600"
             >
-              <div class="service-item item-pink position-relative">
-                <div class="icon">
-                  <svg
-                    width="100"
-                    height="100"
-                    viewBox="0 0 600 600"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke="none"
-                      stroke-width="0"
-                      fill="#f5f5f5"
-                      d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"
-                    ></path>
-                  </svg>
-                  <i class="bi bi-laptop"></i>
-                </div>
-                <a href="https://review-analyzer-n2gg.onrender.com" target="_blank" class="stretched-link">
-                  <h3>Product Review Analyzer</h3>
-                </a>
-                <p>
-                  Analyze product reviews using AI to determine sentiment and generate concise summaries.
-                </p>
-                <a href="https://review-analyzer-n2gg.onrender.com"  target="_blank" class="stretched-link"></a>
+            <div class="service-item item-pink position-relative">
+              <div class="icon">
+                <svg
+                  width="100"
+                  height="100"
+                  viewBox="0 0 600 600"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Background Shape -->
+                  <path
+                    stroke="none"
+                    stroke-width="0"
+                    fill="#f5f5f5"
+                    d="M300,566.797C385.738,576.178,478.789,552.892,531.919,484.949C584.611,417.566,582.489,322.675,553.954,242.036C529.156,171.960,465.245,127.664,395.958,100.740C334.217,76.748,269.435,84.622,207.195,107.289C132.920,134.338,41.793,160.002,22.644,236.695C3.319,314.094,72.723,379.243,124.042,440.321C172.929,498.505,224.455,558.531,300,566.797"
+                  ></path>
+            
+                  <!-- AI Face Icon -->
+                  <circle cx="300" cy="200" r="50" stroke="#333" stroke-width="8" fill="white"/>
+                  <circle cx="285" cy="190" r="5" fill="#333"/>
+                  <circle cx="315" cy="190" r="5" fill="#333"/>
+                  <line x1="285" y1="210" x2="315" y2="210" stroke="#333" stroke-width="5" stroke-linecap="round"/>
+            
+                  <!-- Document with Stars -->
+                  <rect x="180" y="280" width="140" height="180" fill="white" stroke="#333" stroke-width="6" rx="10"/>
+                  <polygon points="200,320 210,340 230,340 215,350 220,370 200,360 180,370 185,350 170,340 190,340" fill="#FFD700"/>
+                  <polygon points="260,320 270,340 290,340 275,350 280,370 260,360 240,370 245,350 230,340 250,340" fill="#FFD700"/>
+                  
+                  <!-- Analysis Waves -->
+                  <path d="M200 420 Q250 390 300 420 T400 420" stroke="#333" stroke-width="6" fill="none"/>
+                </svg>
               </div>
+            
+              <a href="https://review-analyzer-n2gg.onrender.com" target="_blank" class="stretched-link">
+                <h3>🛍️ Product Review Analyzer – AI-Powered Insights</h3>
+              </a>
+              <p>
+                Let AI decode **real customer sentiment**! ⭐🔍 <b>Instantly analyze reviews</b>, extract insights, and **make informed buying decisions**.  
+                Try it now! 🚀  
+              </p>
+              <a href="https://review-analyzer-n2gg.onrender.com" target="_blank" class="stretched-link"></a>
+            </div>
+            
             </div>
             <!-- End Service Item -->
           </div>
@@ -565,119 +738,67 @@
 
       <!-- Contact Section -->
       <section id="contact" class="contact section">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Contact</h2>
         </div>
-        <!-- End Section Title -->
-
+      
         <div class="container" data-aos="fade" data-aos-delay="100">
           <div class="row gy-4">
             <div class="col-lg-4">
-              <div
-                class="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>
-                    130 A, Dev Shree Colony Pithmapur,Indore (Madhya Pradesh)
-                  </p>
+                  <p>130 A, Dev Shree Colony, Pithampur, Indore (Madhya Pradesh)</p>
                 </div>
               </div>
-              <!-- End Info Item -->
-
-              <div
-                class="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
+      
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
                   <h3>Call Us</h3>
                   <p>+91 8349123662</p>
                 </div>
               </div>
-              <!-- End Info Item -->
-
-              <div
-                class="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
+      
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email Us</h3>
                   <p>surajchauhan8349@gmail.com</p>
                 </div>
               </div>
-              <!-- End Info Item -->
             </div>
-
+      
             <div class="col-lg-8">
-              <form
-                action="forms/contact.php"
-                method="post"
-                class="php-email-form"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
+              <form id="contact-form" class="php-email-form">
                 <div class="row gy-4">
                   <div class="col-md-6">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      placeholder="Your Name"
-                      required=""
-                    />
+                    <input type="text" id="name" class="form-control" placeholder="Your Name" required />
                   </div>
-
+      
                   <div class="col-md-6">
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      placeholder="Your Email"
-                      required=""
-                    />
+                    <input type="email" id="email" class="form-control" placeholder="Your Email" required />
                   </div>
-
+      
                   <div class="col-md-12">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="subject"
-                      placeholder="Subject"
-                      required=""
-                    />
+                    <input type="text" id="subject" class="form-control" placeholder="Subject" required />
                   </div>
-
+      
                   <div class="col-md-12">
-                    <textarea
-                      class="form-control"
-                      name="message"
-                      rows="6"
-                      placeholder="Message"
-                      required=""
-                    ></textarea>
+                    <textarea id="message" class="form-control" rows="6" placeholder="Message" required></textarea>
                   </div>
-
+      
                   <div class="col-md-12 text-center">
-                    <div class="loading">Loading</div>
+                    <div class="loading">Loading...</div>
                     <div class="error-message"></div>
-                    <div class="sent-message">
-                      Your message has been sent. Thank you!
-                    </div>
-
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+      
                     <button type="submit">Send Message</button>
                   </div>
                 </div>
               </form>
             </div>
-            <!-- End Contact Form -->
           </div>
         </div>
       </section>
@@ -734,5 +855,55 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
-  </body>
+    <!-- EmailJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function(){
+        emailjs.init("oTzf8BKUfghluMHha"); // Replace with your EmailJS Public Key
+      })();
+    
+      document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+    
+        // Show loading text
+        document.querySelector(".loading").style.display = "block";
+        document.querySelector(".sent-message").style.display = "none";
+        document.querySelector(".error-message").style.display = "none";
+    
+        // Collect form data
+        const formData = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          subject: document.getElementById("subject").value,
+          message: document.getElementById("message").value
+        };
+    
+        // Send email using EmailJS
+        emailjs.send("service_9uglabe", "template_uizio5b", formData)
+          .then(function(response) {
+            console.log("SUCCESS!", response);
+            document.querySelector(".loading").style.display = "none";
+            document.querySelector(".sent-message").style.display = "block";
+    
+            // Clear form fields
+            document.getElementById("contact-form").reset();
+    
+            // Hide success message after 4 seconds
+            setTimeout(() => {
+              document.querySelector(".sent-message").style.display = "none";
+            }, 4000);
+          }, function(error) {
+            console.log("FAILED...", error);
+            document.querySelector(".loading").style.display = "none";
+            document.querySelector(".error-message").innerHTML = "Failed to send message.";
+            document.querySelector(".error-message").style.display = "block";
+    
+            // Hide error message after 4 seconds
+            setTimeout(() => {
+              document.querySelector(".error-message").style.display = "none";
+            }, 4000);
+          });
+      });
+    </script>
+      </body>
 </html>
