@@ -268,8 +268,218 @@ a.social-btn.github {
 .gfg-logo {
   filter: brightness(0) invert(1);
 }
+.experience-section-modern {
+  background: #f0f4f8;
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+}
 
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #1d3557;
+}
 
+.exp-modern-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.exp-modern-card:hover {
+  transform: scale(1.02);
+}
+
+.exp-modern-border {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  background: linear-gradient(120deg, #4facfe, #00f2fe, #4facfe);
+  background-size: 400% 400%;
+  animation: animatedBorder 5s ease infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.exp-modern-content {
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+}
+
+.exp-modern-header {
+  margin-bottom: 20px;
+}
+
+.exp-modern-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1d3557;
+}
+
+.exp-modern-company {
+  font-size: 1rem;
+  color: #457b9d;
+}
+
+.exp-modern-date {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 5px;
+}
+
+.exp-modern-list {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.exp-modern-list li {
+  margin-bottom: 10px;
+  color: #333;
+  line-height: 1.6;
+  position: relative;
+}
+
+.exp-modern-list li::before {
+  content: "▹";
+  color: #00b4d8;
+  font-weight: bold;
+  position: absolute;
+  left: -18px;
+}
+
+@keyframes animatedBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.education-section {
+  padding: 60px 20px;
+  background: #fdfdfd;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1d3557;
+  margin-bottom: 40px;
+}
+
+.education-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.edu-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.edu-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.edu-degree {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1d3557;
+}
+
+.edu-university {
+  color: #457b9d;
+  margin-top: 4px;
+}
+
+.edu-cgpa {
+  background: #00b4d8;
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 10px rgba(0, 180, 216, 0.3);
+}
+.edu-meta {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 4px;
+}
+
+.tech-tools-section {
+  padding: 40px 0;
+  background: #f8f9fa;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #343a40;
+  margin-bottom: 2rem;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.tech-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  max-width: 130px;
+}
+
+.tech-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background-color: #f0f8ff;
+}
+
+.tech-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.tech-card span {
+  display: block;
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 500;
+}
     </style>
   </head>
 
@@ -393,182 +603,222 @@ a.social-btn.github {
             <span class="text-success">AI-driven solutions.</span> Let's build the future together! 🌟  
           </p>
         </div>
-        
-        <div class="gapsMar">
+        <!-- Experience Section -->
+        <section class="experience-section-modern">
           <div class="container">
-            <h3>Education</h3>
-            <div class="margin-gap">
-              <div class="education-box">
-                <div class="education-details">
-                  <div>
-                    <h4>M.Tech in Artificial Intelligence</h4>
-                    <p>Medi-Caps University</p>
-                  </div>
-                  <div class="cgpa">
-                    <span>CGPA: 9.0</span>
-                  </div>
+            <h2 class="section-heading">Experience</h2>
+        
+            <!-- Experience Card 1 -->
+            <div class="exp-modern-card">
+              <div class="exp-modern-border"></div>
+              <div class="exp-modern-content">
+                <div class="exp-modern-header">
+                  <h4 class="exp-modern-title">Associate Software Engineer</h4>
+                  <p class="exp-modern-company">Techinfini Solutions Pvt. Ltd.</p>
+                  <p class="exp-modern-date">Aug 2023 – Present | Indore, India</p>
                 </div>
+                <ul class="exp-modern-list">
+                  <li>Integrated OpenAI, Groq & Hugging Face for chatbots, summaries & sentiment analysis.</li>
+                  <li>Created AI automation using LLMs & NLP for internal tools and clients.</li>
+                  <li>Automated product feeds for Google & Facebook marketing platforms.</li>
+                  <li>Built GraphQL & REST APIs for real-time Shopify product/order sync.</li>
+                </ul>
               </div>
-              <div class="education-box">
-                <div class="education-details">
-                  <div>
-                    <h4>B.Tech in Computer Science</h4>
-                    <p>Indore Institute of Science and Technology</p>
-                  </div>
-                  <div class="cgpa">
-                    <span>CGPA: 8.5</span>
-                  </div>
+            </div>
+        
+            <!-- Experience Card 2 -->
+            <div class="exp-modern-card">
+              <div class="exp-modern-border"></div>
+              <div class="exp-modern-content">
+                <div class="exp-modern-header">
+                  <h4 class="exp-modern-title">Software Engineering Virtual Experience</h4>
+                  <p class="exp-modern-company">Forage Foundation – Global Tech</p>
+                  <p class="exp-modern-date">Mar 2022 – Apr 2022 | Remote</p>
                 </div>
+                <ul class="exp-modern-list">
+                  <li>Learned foundational software architecture using real-world simulations.</li>
+                  <li>Built a relational database for an online shopping system.</li>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+        
 
-        <div class="container">
-          <h3>Technology and Tools</h3>
-          <div class="container_new">
-            <div class="card">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
-                alt="C Language"
-              />
-              <div class="text">C Language</div>
-            </div>
-
-            <div class="card">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                alt="HTML"
-              />
-              <div class="text">HTML</div>
-            </div>
-
-            <div class="card">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                alt="CSS"
-              />
-              <div class="text">CSS</div>
-            </div>
-
-            <div class="card">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                alt="Bootstrap"
-              />
-              <div class="text">Bootstrap</div>
-            </div>
-
-            <div class="card">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                alt="JavaScript"
-              />
-              <div class="text">JavaScript</div>
-            </div>
-
-            <div class="card">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
-                alt="MySQL"
-              />
-              <div class="text">MySQL</div>
-            </div>
-
-            <div class="card">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
-                alt="php"
-              />
-              <div class="text">php</div>
-            </div>
-
-            <div class="card">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-                alt="python"
-              />
-              <div class="text">Python</div>
-            </div>
-
-            <div class="card">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg"
-                alt="matplotlib"
-              />
-              <div class="text">Matplotlib</div>
-            </div>
-            <div class="card">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"
-                alt="machine learning"
-              />
-              <div class="text">Scikit-Learn</div>
-            </div>
-
-            <div class="card">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg"
-                alt="pandas"
-              />
-              <div class="text">Pandas</div>
-            </div>
- 
-
-              <!-- Hugging Face -->
-              <div class="card">
-                <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" />
-                <div class="text">Hugging Face</div>
+        
+        <section class="education-section">
+          <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-wrapper">
+        
+              <!-- M.Tech -->
+              <div class="edu-card">
+                <div class="edu-content">
+                  <div>
+                    <h4 class="edu-degree">M.Tech in Artificial Intelligence</h4>
+                    <p class="edu-university">Medi-Caps University</p>
+                    <p class="edu-meta">Aug 2023 – Present | Indore, India</p>
+                  </div>
+                  <div class="edu-cgpa">CGPA: 9.0</div>
+                </div>
               </div>
-
-              <!-- Docker -->
-              <div class="card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
-                <div class="text">Docker</div>
+        
+              <!-- B.Tech -->
+              <div class="edu-card">
+                <div class="edu-content">
+                  <div>
+                    <h4 class="edu-degree">B.Tech in Computer Science</h4>
+                    <p class="edu-university">Indore Institute of Science and Technology</p>
+                    <p class="edu-meta">Aug 2019 – May 2023 | Indore, India</p>
+                  </div>
+                  <div class="edu-cgpa">CGPA: 8.5</div>
+                </div>
               </div>
-
-            <div class="card">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
-                alt="Postman"
-              />
-              <div class="text">Postman</div>
+        
             </div>
-
-            <div class="card">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                alt="Git"
-              />
-              <div class="text">Git</div>
-            </div>
-            <div class="card">
-              <img
-                src="https://cdn-icons-png.freepik.com/512/9831/9831299.png"
-                alt="NLP Logo"
-                width="64" height="64"
-              />
-              <div class="text"><strong>NLP</strong></div>
-            </div>
-            <div class="card">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/5044/5044010.png"
-                alt="Machine Learning"
-                width="40" height="40"
-              />
-              <div class="text"><strong>Machine Learning</strong></div>
-            </div>
-
-            
           </div>
-        </div>
+        </section>
+
+        <section class="tech-tools-section">
+          <div class="container">
+            <h2 class="section-title">Technology & Tools</h2>
+            <div class="tools-grid">
+              <div class="tech-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+                  alt="C Language"
+                />
+                <div class="text">C Language</div>
+              </div>
+  
+              <div class="tech-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  alt="HTML"
+                />
+                <div class="text">HTML</div>
+              </div>
+  
+              <div class="tech-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                  alt="CSS"
+                />
+                <div class="text">CSS</div>
+              </div>
+  
+              <div class="tech-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                  alt="Bootstrap"
+                />
+                <div class="text">Bootstrap</div>
+              </div>
+  
+              <div class="tech-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  alt="JavaScript"
+                />
+                <div class="text">JavaScript</div>
+              </div>
+  
+              <div class="tech-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                  alt="MySQL"
+                />
+                <div class="text">MySQL</div>
+              </div>
+  
+              <div class="tech-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+                  alt="php"
+                />
+                <div class="text">php</div>
+              </div>
+  
+              <div class="tech-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                  alt="python"
+                />
+                <div class="text">Python</div>
+              </div>
+  
+              <div class="tech-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg"
+                  alt="matplotlib"
+                />
+                <div class="text">Matplotlib</div>
+              </div>
+              <div class="tech-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"
+                  alt="machine learning"
+                />
+                <div class="text">Scikit-Learn</div>
+              </div>
+  
+              <div class="tech-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg"
+                  alt="pandas"
+                />
+                <div class="text">Pandas</div>
+              </div>
+   
+  
+                <!-- Hugging Face -->
+                <div class="tech-card">
+                  <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" />
+                  <div class="text">Hugging Face</div>
+                </div>
+  
+                <!-- Docker -->
+                <div class="tech-card">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
+                  <div class="text">Docker</div>
+                </div>
+  
+              <div class="tech-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                  alt="Postman"
+                />
+                <div class="text">Postman</div>
+              </div>
+  
+              <div class="tech-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                  alt="Git"
+                />
+                <div class="text">Git</div>
+              </div>
+              <div class="tech-card">
+                <img
+                  src="https://cdn-icons-png.freepik.com/512/9831/9831299.png"
+                  alt="NLP Logo"
+                  width="64" height="64"
+                />
+                <div class="text"><strong>NLP</strong></div>
+              </div>
+              <div class="tech-card">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/5044/5044010.png"
+                  alt="Machine Learning"
+                  width="40" height="40"
+                />
+                <div class="text"><strong>Machine Learning</strong></div>
+              </div>
+        
+            </div>
+          </div>
+        </section>
       </section>
-      <!-- /About Section -->
-
-      <!-- Skills Section -->
-      <!-- /Skills Section -->
-
-      <!-- Services Section -->
       <section id="services" class="services section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
