@@ -480,6 +480,32 @@ a.social-btn.github {
   color: #333;
   font-weight: 500;
 }
+.research-icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.research-icon i {
+  font-size: 2rem;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+  z-index: 2;
+}
+
+.research-icon:hover {
+  transform: scale(1.1);
+}
+
+.research-icon:hover i {
+  color: #007bff; /* Highlight blue or theme color */
+  transform: scale(1.2);
+}
+
     </style>
   </head>
 
@@ -503,7 +529,7 @@ a.social-btn.github {
             >
           </li>
           <li>
-            <a href="SurajChauhan_UpdatedCV_Exp_1.pdf" target="_blank"
+            <a href="SURAJ_CV.pdf" target="_blank"
             download ><i class="bi bi-file-earmark-text navicon"></i
               ><span>Resume</span></a
             >
@@ -513,6 +539,12 @@ a.social-btn.github {
             <a href="#services"
               ><i class="bi bi-hdd-stack navicon"></i><span>Projects</span></a
             >
+          </li>
+          <li>
+            <a href="#research">
+              <i class="bi bi-journal-text navicon"></i>
+              <span>Research</span>
+            </a>
           </li>
           <li>
             <a href="#contact"
@@ -561,7 +593,7 @@ a.social-btn.github {
             <a href="#contact" class="btn btn-primary btn-lg btn-hover-glow scrollto">
               <i class="bi bi-send me-2"></i>Get in Touch
             </a>
-            <a href="SurajChauhan_UpdatedCV_Exp_1.pdf"
+            <a href="SURAJ_CV.pdf"
                class="btn btn-outline-light btn-lg btn-hover-glow" 
                target="_blank"
                download>
@@ -659,7 +691,7 @@ a.social-btn.github {
                     <p class="edu-university">Medi-Caps University</p>
                     <p class="edu-meta">Aug 2023 – Present | Indore, India</p>
                   </div>
-                  <div class="edu-cgpa">CGPA: 9.0</div>
+                  <div class="edu-cgpa">CGPA: 9.2</div>
                 </div>
               </div>
         
@@ -1048,6 +1080,61 @@ a.social-btn.github {
         </div>
       </section>
       <!-- /Services Section -->
+   <section id="research" class="services section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Research</h2>
+  </div>
+  <!-- End Section Title -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+      <div class="d-flex flex-row align-items-start shadow rounded p-4 mb-4 bg-light" style="transition: box-shadow 0.3s ease, transform 0.3s ease;" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)'; this.style.transform='translateY(-3px)'" onmouseout="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'; this.style.transform='translateY(0)'">
+        
+        <!-- Left Icon -->
+        <div class="me-4 text-primary" style="font-size: 3rem; transition: transform 0.3s ease;" onmouseover="this.style.transform='rotate(5deg)'" onmouseout="this.style.transform='rotate(0)'">
+          <i class="bi bi-file-earmark-medical"></i>
+        </div>
+
+        <!-- Right Content -->
+        <div class="flex-grow-1">
+          <h5 class="mb-2 fw-semibold" style="color: #333;">Multimodal fusion of CT and MRI for liver tumor segmentation and classification using attention-based CNNs. 🧬</h5>
+          <p class="mb-3" style="font-size: 0.95rem; color: #555;">
+            Published in: <strong>Journal of Neonatal Surgery</strong><br>
+            Focused on enhancing liver tumor detection through multimodal medical image fusion and deep learning using attention-based convolutional neural networks.
+          </p>
+          <!-- Action Buttons -->
+          <div class="d-flex gap-2">
+            <a href="8335-Article Text-26765-1-10-20250717-suraj-chouhan.pdf"
+               target="_blank"
+               class="btn btn-sm btn-outline-primary"
+               style="transition: background-color 0.2s ease, transform 0.2s ease;"
+               onmouseover="this.style.backgroundColor='#e9f5ff'; this.style.transform='scale(1.05)'"
+               onmouseout="this.style.backgroundColor=''; this.style.transform='scale(1)'"
+               title="Open PDF in new tab">
+              <i class="bi bi-eye"></i> View PDF
+            </a>
+            <a href="https://www.jneonatalsurg.com/index.php/jns/article/view/8335"
+               target="_blank"
+               class="btn btn-sm btn-primary"
+               style="transition: transform 0.2s ease;"
+               onmouseover="this.style.transform='scale(1.05)'"
+               onmouseout="this.style.transform='scale(1)'"
+               title="Go to Journal Page">
+              🔗 Click Here
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</section>
+
 
       <!-- Contact Section -->
       <section id="contact" class="contact section">
