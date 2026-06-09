@@ -1523,7 +1523,7 @@ a.social-btn.github {
       const ratio = Math.max(0, 1 - dist / INFLUENCE);
       ctx.beginPath();
       ctx.arc(d.x, d.y, BASE_R + ratio * 2.5, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(0, 180, 216, ${0.18 + ratio * 0.65})`;
+      ctx.fillStyle = `rgba(0, 0, 0, ${0.18 + ratio * 0.65})`;
       ctx.fill();
     }
     requestAnimationFrame(draw);
