@@ -1503,7 +1503,8 @@ a.social-btn.github {
   const section = canvas.parentElement;
   let mouse = { x: -9999, y: -9999 };
   let dots = [];
-  const SPACING = 30, BASE_R = 1.5, INFLUENCE = 100;
+  // const SPACING = 30, BASE_R = 1.5, INFLUENCE = 100;
+  const SPACING = 28, BASE_R = 2.5, INFLUENCE = 110;
 
   function resize() {
     canvas.width = section.offsetWidth;
@@ -1524,7 +1525,8 @@ a.social-btn.github {
       ctx.beginPath();
       ctx.arc(d.x, d.y, BASE_R + ratio * 2.5, 0, Math.PI * 2);
       // ctx.fillStyle = `rgba(0, 0, 0, ${0.35 + ratio * 0.55})`;
-      ctx.fillStyle = ratio > 0 ? `rgba(255, 255, 255, ${0.85 + ratio * 0.15})` : `rgba(255, 255, 255, 0.35)`;
+      // ctx.fillStyle = ratio > 0 ? `rgba(255, 255, 255, ${0.85 + ratio * 0.15})` : `rgba(255, 255, 255, 0.35)`;
+      ctx.fillStyle = ratio > 0 ? `rgba(0, 0, 0, ${0.9 + ratio * 0.1})` : `rgba(0, 0, 0, 0.75)`;
       ctx.fill();
     }
     requestAnimationFrame(draw);
